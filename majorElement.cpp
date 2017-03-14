@@ -1,4 +1,7 @@
-//More Voting Algorithm. 
+//169. LeetCode
+
+//Moores Voting Algorithm.
+//Notes: Assumptions: No empty vector. There's a majority element.
 
 class solution{
 public: 
@@ -15,13 +18,8 @@ public:
 				iCont++ ;
 			else
 				iCont-- ;
-
-		} 
-		
-		//Because the problem says that there's a majority element
-		//There's no need to check if iMajor is the majority element
+		}
 		return iMajor ;
-
 	}
 
 };
