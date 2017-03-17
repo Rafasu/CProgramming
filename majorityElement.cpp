@@ -1,6 +1,8 @@
 //169. LeetCode
 
-//Moores Voting Algorithm.
+
+//Moore's Voting Algorithm.
+
 //Notes: Assumptions: No empty vector. There's a majority element.
 
 class solution{
@@ -21,5 +23,4 @@ public:
 		}
 		return iMajor ;
 	}
-
 };
