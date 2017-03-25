@@ -16,34 +16,35 @@ using namespace std ;
 //Global varriables.
 const int INF =  999 ;
 int x, y, r ;
+int iMat[400][400] ;
 
 //Make FLoyd Algorithm starting from second node.
-void floyd(int iMat[][400], int n){
+void floyd(int n){
 	for(int k = 1 ; k <= n ;k++){
 		for(int i = 1 ; i <= n ; i++){
 			for(int j = 1 ; j <= n; j++){
-				if(iMat[i][k] + iMat[k][j] < iMat[i][j]) ;
-					iMat[i][j] = iMat[i][k] +  iMat[k][j] ;
+				if(iMat[i][k] + iMat[k][j] < iMat[i][j]){ 
+					iMat[i][j] = iMat[i][k] +  iMat[k][j];
+				}
 			}
 		}
 	}
 }
 
 //Fill the matrix starting from the second node. 
-void fillMatrix(int iMat[][400], int n){
+void fillMatrix(int n){
 	for(int i = 1; i <= n ;i++){
-		for(int j = 1 ; j <= n; i++){
+		for(int j = 1 ; j <= n; j++){
 			if(i == j )
 				iMat[i][j] = 0 ;
 			else
 				iMat[i][j] = INF ;
 		}
 	}
-
 }
 
 //Fill the matrix starting from node 1. 
-void fillEdges(int iMat[][400], int n) {
+void fillEdges( int n) {
 	for(int i = 1 ; i <= n ;i++){
 		cin >> x >> y >> r ;
 		iMat[x][y] = r ;
@@ -53,16 +54,15 @@ void fillEdges(int iMat[][400], int n) {
 int main(){
 
 	int N, M, Q, x, y, r;
-	int iMat[400][400] ;
 
 	//Get number of Nodes.
 	cin >> N ;
-	fillMatrix(iMat, N) ;
+	fillMatrix(N) ;
 
 	//Get edges.
 	cin >> M ;
-	fillEdges(iMat, M) ;
-	floyd(iMat, N) ;
+	fillEdges(M) ;
+	floyd(N) ;
 
 	//Get Querys
 	cin >> Q ;
