@@ -35,3 +35,11 @@ class Solution:
 # Runtime: 32 ms, faster than 37.75% of Python3 online submissions for Fibonacci Number.
 # Memory Usage: 12.9 MB, less than 100.00% of Python3 online submissions for Fibonacci Number.
             
+# Solution: Using golden ration
+# Complexity: Time O(1) | Space O(1)
+class Solution:
+    def fib(self, N: int) -> int:
+        golden_ratio = (1 + 5 ** 0.5) / 2
+        return int((golden_ratio ** N + 1)/5 ** 0.5)
+# Runtime: 24 ms, faster than 88.68% of Python3 online submissions for Fibonacci Number.
+# Memory Usage: 12.9 MB, less than 100.00% of Python3 online submissions for Fibonacci Number.
