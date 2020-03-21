@@ -28,8 +28,8 @@ var twoSum = function(nums, target) {
     }
 }; 
 
-Runtime: 56 ms, faster than 85.49% of JavaScript online submissions for Two Sum.
-Memory Usage: 36.3 MB, less than 11.16% of JavaScript online submissions for Two Sum.
+// Runtime: 56 ms, faster than 85.49% of JavaScript online submissions for Two Sum.
+// Memory Usage: 36.3 MB, less than 11.16% of JavaScript online submissions for Two Sum.
 
 
 // Solution: Two-pass Hash Table with JS Objects. 
