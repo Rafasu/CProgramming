@@ -8,10 +8,10 @@ def getNthFibonacci(n, memoize = {1: 0, 2: 1}):
         memoize[n] = getNthFibonacci(n - 1, memoize) + getNthFibonacci(n - 2, memoize)
         return memoize[n]
 
-
+# Solution: Using array
 def nthFibonacci(n):
     lastTwo = [0, 1]
-    counter = 3
+    counter = 2
     while(counter <= n):
         nextFib = lastTwo[0] + lastTwo[1]
         lastTwo[0] = lastTwo[1]
