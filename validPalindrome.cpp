@@ -1,5 +1,5 @@
 //LeetCode
-##Two Pointers. String
+//Two Pointers. String
 //125. Valid Palindrome
 
 
@@ -23,7 +23,7 @@ public:
 		//Checa si el nuevo string es palindrome.
 		i = 0; j = sAlfanum.length() - 1 ;
 		while(i < j){
-			if(sAlfanum[i] != sAlfanum[j] ;
+			if(sAlfanum[i] != sAlfanum[j])
 				return false ;
 			i++ ;
 			j-- ;
